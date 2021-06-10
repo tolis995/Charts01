@@ -28,13 +28,14 @@ public XYScatterChart_AWT( String applicationTitle, String chartTitle ) {
   	plot.setBackgroundPaint(new Color(255, 228, 196));
 
   	// Adding chart into a chart panel
-  	ChartPanel chartPanel = new ChartPanel(chart);
+  	ChartPanel chartPanel = new ChartPanel(chart );
 
   	// settind default size
   	chartPanel.setPreferredSize(new java.awt.Dimension(700, 470));
 
   	// add to contentPane
   	setContentPane(chartPanel);
+  	System.out.println("HELLO");
       
    }
    

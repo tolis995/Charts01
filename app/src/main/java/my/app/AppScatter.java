@@ -13,6 +13,7 @@ public class AppScatter
 	         "Call Block Propabilities");
 	      
 	      
+	      
 	      chart.pack( );          
 	      RefineryUtilities.centerFrameOnScreen( chart );          
 	      chart.setVisible( true ); 
