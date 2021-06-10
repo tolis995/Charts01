@@ -2,9 +2,13 @@ package my.app;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -19,6 +23,9 @@ public class XYScatterChart_AWT extends ApplicationFrame {
 
 public XYScatterChart_AWT( String applicationTitle, String chartTitle ) {
       super(applicationTitle);
+      NumberFormat formatter = new DecimalFormat("0.######E0");
+      
+      
       
       JFreeChart chart = ChartFactory.createScatterPlot(chartTitle, "X-Axis", "Y-Axis", crDataset.createDataset(),
     			PlotOrientation.VERTICAL, true, true, true);
@@ -26,7 +33,10 @@ public XYScatterChart_AWT( String applicationTitle, String chartTitle ) {
    // Changes background color
   	XYPlot plot = (XYPlot) chart.getPlot();
   	plot.setBackgroundPaint(new Color(255, 228, 196));
-
+  	
+  	NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
+    rangeAxis.setNumberFormatOverride(formatter);
+    
   	// Adding chart into a chart panel
   	ChartPanel chartPanel = new ChartPanel(chart );
 
