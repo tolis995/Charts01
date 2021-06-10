@@ -34,8 +34,13 @@ public XYScatterChart_AWT( String applicationTitle, String chartTitle ) {
   	XYPlot plot = (XYPlot) chart.getPlot();
   	plot.setBackgroundPaint(new Color(255, 228, 196));
   	
-  	NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
-    rangeAxis.setNumberFormatOverride(formatter);
+//  	NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
+//    rangeAxis.setNumberFormatOverride(formatter);
+    
+    NumberAxis xAxis = (NumberAxis) plot.getDomainAxis();
+    xAxis.setNumberFormatOverride(formatter);
+
+ 
     
   	// Adding chart into a chart panel
   	ChartPanel chartPanel = new ChartPanel(chart );
