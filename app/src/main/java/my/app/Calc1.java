@@ -27,9 +27,12 @@ public class Calc1 {
 		
 //		System.out.println("Factorial of       10 ="+factorial(0.50));
 		
-		System.out.println("Factorial Using Guava ="+factorialUsingGuava(2150));
+		System.out.println("Factorial Using Guava ="+factorialUsingGuava(50));
 		
-		System.out.println("Binomial coefficient , 15, 5 = "+binomialUsingGuava(15,5));
+		System.out.println("Binomial coefficient , 15, 5 = "+binomialUsingGuava(100,10));
+		
+		System.out.println("Binomial coefficient , 100, 10 = "+BigIntegerMath.binomial(100,10));
+		
 
 	}
 
