@@ -35,7 +35,7 @@ public XYScatterChart_AWT( String applicationTitle, String chartTitle ) {
 
   	// add to contentPane
   	setContentPane(chartPanel);
-  	System.out.println("HELLO");
+//  	System.out.println("HELLO");
       
    }
    
